@@ -22,8 +22,6 @@ Permettere il toggle del task (completato/non completato)
 Abilitare l’eliminazione di un task
 */
 
-
-
  ?>
 
 <!DOCTYPE html>
@@ -37,28 +35,35 @@ Abilitare l’eliminazione di un task
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
+<div id="app">
 
-<header class="border-bottom border-primary">
-    <div class="container d-flex align-items-center justify-content-between">
-        <div class="title">
-            <h1 class="text-primary">To Do List</h1>
-        </div>
-        <div>
-            <div class="input-group">
-                <input type="text" class="form-control shadow-none border-bottom border-primary" id="basic-url" placeholder="Inserisci una task...">
-                <button class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></button>
+    <header class="border-bottom border-primary">
+        <div class="container d-flex align-items-center justify-content-between">
+            <div class="title">
+                <h1 class="text-primary">To Do List</h1>
+            </div>
+            <div>
+                <div class="input-group">
+                    <input type="text" class="form-control shadow-none border-bottom border-primary" name="task" placeholder="Inserisci una task...">
+                    <button class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></button>
+                </div>   
             </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<main>
+    <main>
+        <div class="container py-5">
+            <ul class="list-group">
+                <li class="list-group-item border-primary text-primary"></li>
+            </ul>
+        </div>
+    </main>
 
-</main>
+    <footer>
 
-<footer>
+    </footer>
+</div>
 
-</footer>
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./JS/script.js"></script>
