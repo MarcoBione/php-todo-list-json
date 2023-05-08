@@ -43,18 +43,20 @@ Abilitare l’eliminazione di un task
                 <h1 class="text-primary">To Do List</h1>
             </div>
             <div>
-                <div class="input-group">
-                    <input type="text" class="form-control shadow-none border-bottom border-primary" name="task" placeholder="Inserisci una task...">
-                    <button class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></button>
-                </div>   
+                <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
+                    <div class="input-group">
+                        <input type="text" class="form-control shadow-none border-bottom border-primary" name="task" placeholder="Inserisci una task...">
+                        <button class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></button>
+                    </div>
+                </form>
             </div>
         </div>
     </header>
 
     <main>
         <div class="container py-5">
-            <ul class="list-group" v-for="(task,index in taskList)">
-                <li class="list-group-item border-primary text-primary">{{ task }}</li>
+            <ul class="list-group">
+                <li class="list-group-item border-primary text-primary">la task andrà qua</li>
             </ul>
         </div>
     </main>
