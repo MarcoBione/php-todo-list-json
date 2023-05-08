@@ -12,8 +12,18 @@
 </head>
 <body>
 
+<header>
 
-    
+</header>
+
+<main>
+
+</main>
+
+<footer>
+
+</footer>
+
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 <script src="./JS/script.js"></script>
 </body>
