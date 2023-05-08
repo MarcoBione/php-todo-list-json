@@ -1,5 +1,5 @@
 <?php
-$task = [
+$tasks = [
     [
         'task'=> 'allenamento'
     ],
@@ -10,4 +10,4 @@ $task = [
 
 header('Content-Type: application/json');
 
-echo json_encode($task);
+echo json_encode($tasks);

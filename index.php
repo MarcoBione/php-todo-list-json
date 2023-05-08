@@ -45,7 +45,7 @@ Abilitare l’eliminazione di un task
             <div>
                 <div class="input-group">
                     <input type="text" class="form-control shadow-none border-bottom border-primary" name="task" placeholder="Inserisci una task...">
-                    <button class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></button>
+                    <button class="btn btn-outline-primary" @click="getTasks" ><i class="fa-solid fa-plus"></i></button>
                 </div>   
             </div>
         </div>
@@ -53,8 +53,8 @@ Abilitare l’eliminazione di un task
 
     <main>
         <div class="container py-5">
-            <ul class="list-group">
-                <li class="list-group-item border-primary text-primary"></li>
+            <ul class="list-group" v-for:(task,index in taskList)>
+                <li class="list-group-item border-primary text-primary">{{ task }}</li>
             </ul>
         </div>
     </main>
@@ -66,6 +66,7 @@ Abilitare l’eliminazione di un task
 
 
 <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="./JS/script.js"></script>
 </body>
 </html>
