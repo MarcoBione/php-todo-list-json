@@ -22,7 +22,7 @@ Permettere il toggle del task (completato/non completato)
 Abilitare l’eliminazione di un task
 */
 
- ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -43,20 +43,18 @@ Abilitare l’eliminazione di un task
                 <h1 class="text-primary">To Do List</h1>
             </div>
             <div>
-                <form action="<?php echo $_SERVER['PHP_SELF']?>" method="POST">
-                    <div class="input-group">
-                        <input type="text" class="form-control shadow-none border-bottom border-primary" name="task" placeholder="Inserisci una task...">
-                        <button class="btn btn-outline-primary"><i class="fa-solid fa-plus"></i></button>
-                    </div>
-                </form>
+                <div class="input-group">
+                    <input type="text" class="form-control shadow-none border-bottom border-primary" name="task" placeholder="Inserisci una task...">
+                    <button class="btn btn-outline-primary" @click="tasksListReader"><i class="fa-solid fa-plus"></i></button>
+                </div>
             </div>
         </div>
     </header>
 
     <main>
         <div class="container py-5">
-            <ul class="list-group">
-                <li class="list-group-item border-primary text-primary">la task andrà qua</li>
+            <ul class="list-group" v-for="tasks,index in tasksList">
+                <li class="list-group-item border-primary text-primary">{{tasks}}</li>
             </ul>
         </div>
     </main>
